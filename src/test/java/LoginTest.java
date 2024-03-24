@@ -5,7 +5,6 @@ import org.testng.asserts.SoftAssert;
 
 import java.net.MalformedURLException;
 
-import static org.example.AndroidDevice.PIXEL_8_PRO_API_30;
 
 
 public class LoginTest extends BaseTest {

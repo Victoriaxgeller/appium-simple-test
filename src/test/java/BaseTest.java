@@ -12,7 +12,6 @@ import java.net.MalformedURLException;
 public class BaseTest {
     protected AndroidDriver driver;
     protected FluentWait<WebDriver> wait;
-    protected FluentWaitExample fluent;
     protected ScreenFactory factory;
     protected Faker faker = new Faker();
 
@@ -20,7 +19,6 @@ public class BaseTest {
 //    @BeforeMethod
     public AndroidDriver setup(AndroidDevice androidDevice) throws MalformedURLException {
         AndroidDriver driver = new DriverSetup().init(androidDevice);
-        fluent = new FluentWaitExample(driver);
         factory = new ScreenFactory(driver);
         return driver;
     }

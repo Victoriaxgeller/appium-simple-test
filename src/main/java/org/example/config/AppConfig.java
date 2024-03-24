@@ -13,11 +13,7 @@ public interface AppConfig extends Config {
     String baseURLWithParam(String port);
 
     @DefaultValue("C:\\Users\\Viktoriia_Seleznova\\Downloads\\android.wdio.native.app.v1.0.8.apk")
+//    @DefaultValue("apk/android.wdio.native.app.v1.0.8.apk")
     @Key("pathToApk")
     String pathToApk();
-
-
-    public default AppConfig getInstance(){
-        return this;
-    }
 }
