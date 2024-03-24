@@ -16,7 +16,6 @@ public class BaseTest {
     protected Faker faker = new Faker();
 
 
-//    @BeforeMethod
     public AndroidDriver setup(AndroidDevice androidDevice) throws MalformedURLException {
         AndroidDriver driver = new DriverSetup().init(androidDevice);
         factory = new ScreenFactory(driver);
