@@ -1,5 +1,4 @@
 import org.example.AndroidDevice;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -16,7 +15,13 @@ public class IncorrectLoginTest extends BaseTest {
                 .typePassword(faker.internet().password())
                 .clickLoginButton();
 
-        String errorText = factory.successPopup().getErrorText();
-        Assert.assertEquals(errorText, "Invalid email", "Title is incorrect");
+        String success = factory.successPopup().getSuccessTitleText();
+        String description = factory.successPopup().getSuccessDescriptionText();
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(success, "Success", "Title is incorrect");
+        softAssert.assertEquals(description, "You are logged in!", "Description text is incorrect");
+        softAssert.assertAll();
     }
+
 }
