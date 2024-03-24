@@ -9,8 +9,6 @@ import static org.example.AndroidDevice.PIXEL_8_PRO_API_30;
 
 public class RegistrationTest extends BaseTest {
 
-//    protected AndroidDriver driver;
-
     @Test(description = "Success registration with correct data")
     public void userCanSignUpWithCorrectDataPIXEL_8_PRO_API_30() throws MalformedURLException {
         driver = setup(PIXEL_8_PRO_API_30);
@@ -30,6 +28,4 @@ public class RegistrationTest extends BaseTest {
         softAssert.assertEquals(description, "You successfully signed up!", "Description text is incorrect");
         softAssert.assertAll();
     }
-
-
 }
